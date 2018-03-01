@@ -88,6 +88,8 @@ class HomePage extends Component {
                 <CardBody className="p-4">
                   <h1>Register</h1>
                   <p className="text-muted">Create your account</p>
+                  <FormGroup row>
+                 <Col xs="12" md="6" >
                   <InputGroup className="mb-3">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
@@ -96,7 +98,8 @@ class HomePage extends Component {
                     </InputGroupAddon>
                     <Input type="text" placeholder="First Name" name="firstName" value={user.firstName} onChange={this.changeFunction}/>
                   </InputGroup>
-
+                  </Col>
+                  <Col  md="6" >
                   <InputGroup className="mb-3">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
@@ -105,20 +108,27 @@ class HomePage extends Component {
                     </InputGroupAddon>
                     <Input type="text" placeholder="Last Name" name="lastName" value={user.lastName} onChange={this.changeFunction}/>
                   </InputGroup>
-
-                
+                  </Col>
+                  </FormGroup>
+                  {/* </Col> */}
+                  <Col xs="12" md="6">
                   <InputGroup className="mb-3">
                   <InputGroupAddon addonType="prepend">
                       <InputGroupText>@</InputGroupText>
                     </InputGroupAddon>
                     <Input type="text" placeholder="Email"  name="Email" value={user.Email} onChange={this.changeFunction}/>
                   </InputGroup>
-
+                  </Col>
                   <FormGroup row>
-                    <Col md="2">
-                      <Label >City </Label>
+                    <Col xs="12" md="6">
+                      <Input type="select" name="select" id="City" placeholder="City"  onChange={this.changeFunction}>
+                        <option value="">Select City</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Nashik">Nashik</option>
+                      </Input>
                     </Col>
-                    <Col xs="12" md="10">
+                    <Col  md="6">
                       <Input type="select" name="select" id="City" placeholder="City"  onChange={this.changeFunction}>
                         <option value="">Select City</option>
                         <option value="Mumbai">Mumbai</option>
